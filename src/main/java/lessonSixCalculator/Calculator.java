@@ -1,4 +1,4 @@
-package LessonSixCalculator;
+package lessonSixCalculator;
 
 public class Calculator {
 
