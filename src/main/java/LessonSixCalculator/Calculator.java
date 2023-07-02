@@ -14,7 +14,12 @@ public class Calculator {
         return (long) a * (long) b;
     }
 
-    public static double divideNumberByAnother(int a, int b){
-        return (double) a / (double) b;
+    public static double divideNumberByAnother(int a, int b) {
+        if (b == 0){
+            return 0;
+        }
+        else{
+            return (double) a / (double) b;
+        }
     }
 }

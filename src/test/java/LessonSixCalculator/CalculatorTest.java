@@ -31,5 +31,6 @@ class CalculatorTest {
         Assertions.assertEquals(2, Calculator.divideNumberByAnother(2, 1));
         Assertions.assertEquals(7D/4D, Calculator.divideNumberByAnother(7, 4));
         Assertions.assertEquals(12313D/3322D, Calculator.divideNumberByAnother(12313, 3322));
+        Assertions.assertEquals(0, Calculator.divideNumberByAnother(133, 0));
     }
 }
