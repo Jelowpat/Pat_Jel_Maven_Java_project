@@ -13,10 +13,10 @@ class CalculatorTest {
     }
 
     @Test
-    public void subtractANumberFromAnotherTest(){
-        Assertions.assertEquals(1, Calculator.subtractANumberFromAnother(2, 1));
-        Assertions.assertEquals(3, Calculator.subtractANumberFromAnother(7, 4));
-        Assertions.assertEquals(8991, Calculator.subtractANumberFromAnother(12313, 3322));
+    public void subtractNumberFromAnotherTest(){
+        Assertions.assertEquals(1, Calculator.subtractNumberFromAnother(2, 1));
+        Assertions.assertEquals(3, Calculator.subtractNumberFromAnother(7, 4));
+        Assertions.assertEquals(8991, Calculator.subtractNumberFromAnother(12313, 3322));
     }
 
     @Test
