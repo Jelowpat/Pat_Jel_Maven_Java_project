@@ -7,35 +7,35 @@ import org.junit.jupiter.api.Test;
 class DaysOfWeekTest {
 
     @Test
-    public void shouldBeMonday() {
+    public void isMonday() {
         Assertions.assertEquals("Monday", DaysOfWeek.getInfoAboutTheDay(1));
     }
     @Test
-    public void shouldBeTuesday() {
+    public void isTuesday() {
         Assertions.assertEquals("Tuesday", DaysOfWeek.getInfoAboutTheDay(2));
     }
     @Test
-    public void shouldBeWednesday() {
+    public void isWednesday() {
         Assertions.assertEquals("Wednesday", DaysOfWeek.getInfoAboutTheDay(3));
     }
     @Test
-    public void shouldBeThursday() {
+    public void isThursday() {
         Assertions.assertEquals("Thursday", DaysOfWeek.getInfoAboutTheDay(4));
     }
     @Test
-    public void shouldBeFriday() {
+    public void isFriday() {
         Assertions.assertEquals("Friday", DaysOfWeek.getInfoAboutTheDay(5));
     }
     @Test
-    public void shouldBeWeekend() {
+    public void isWeekend() {
         Assertions.assertEquals("Weekend", DaysOfWeek.getInfoAboutTheDay(6));
     }
     @Test
-    public void shouldBeWeekendButSunday() {
+    public void isWeekendButSunday() {
         Assertions.assertEquals("Weekend", DaysOfWeek.getInfoAboutTheDay(7));
     }
     @Test
-    public void shouldBeNoSuchDay() {
+    public void thereIsNoSuchDay() {
         Assertions.assertEquals("There is no such day!", DaysOfWeek.getInfoAboutTheDay(112));
     }
 }
