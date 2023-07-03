@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 class OddOrEvenTest {
 
     @Test
-    public void shouldBeEven() {
+    public void isEven() {
         Assertions.assertEquals("even", OddOrEven.CheckIfEvenOrOdd(2));
     }
     @Test
-    public void shouldBeOdd() {
+    public void isOdd() {
         Assertions.assertEquals("odd", OddOrEven.CheckIfEvenOrOdd(1111));
     }
 }
