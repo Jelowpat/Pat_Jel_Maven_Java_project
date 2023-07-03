@@ -7,11 +7,11 @@ import org.junit.jupiter.api.Test;
 class AgeVerificationTest {
 
     @Test
-    public void shouldBeVerified() {
+    public void isPositivlyVerified() {
         Assertions.assertTrue(AgeVerification.verifyingAge(18));
     }
     @Test
-    public void shouldBeNotVerified() {
+    public void isNegativlyVerified() {
         Assertions.assertFalse(AgeVerification.verifyingAge(17));
     }
 }
