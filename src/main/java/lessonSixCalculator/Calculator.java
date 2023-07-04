@@ -2,24 +2,24 @@ package lessonSixCalculator;
 
 public class Calculator {
 
-    public static int addTwoNumbers(int a, int b){
+    public static int add(int a, int b){
         return a + b;
     }
 
-    public static int subtractNumberFromAnother(int a, int b){
+    public static int subtract(int a, int b){
         return a - b;
     }
 
-    public static long multiplyTwoNumbers(int a, int b){
+    public static long multiply(int a, int b){
         return (long) a * (long) b;
     }
 
-    public static double divideNumberByAnother(int a, int b) {
+    public static double divide(double a, double b) {
         if (b == 0){
             return 0;
         }
         else{
-            return (double) a / (double) b;
+            return a / b;
         }
     }
 }

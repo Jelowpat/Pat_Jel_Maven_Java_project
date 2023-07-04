@@ -6,26 +6,26 @@ import org.junit.jupiter.api.Test;
 class CalculatorTest {
 
     @Test
-    public void shouldAddTwoNumbers(){
-        Assertions.assertEquals(15635, Calculator.addTwoNumbers(12313, 3322));
+    public void shouldAdd(){
+        Assertions.assertEquals(15635, Calculator.add(12313, 3322));
     }
 
     @Test
-    public void shouldSubtractNumberFromAnother(){
-        Assertions.assertEquals(8991, Calculator.subtractNumberFromAnother(12313, 3322));
+    public void shouldSubtract(){
+        Assertions.assertEquals(8991, Calculator.subtract(12313, 3322));
     }
 
     @Test
-    public void shouldMultiplyTwoNumbers(){
-        Assertions.assertEquals(40903786, Calculator.multiplyTwoNumbers(12313, 3322));
+    public void shouldMultiply(){
+        Assertions.assertEquals(40903786, Calculator.multiply(12313, 3322));
     }
 
     @Test
-    public void shouldDivideNumberByAnother(){
-        Assertions.assertEquals(12313D/3322D, Calculator.divideNumberByAnother(12313, 3322));
+    public void shouldDivide(){
+        Assertions.assertEquals(3.7065021071643587, Calculator.divide(12313, 3322));
     }
     @Test
-    public void shouldNotDivideByZero() {
-        Assertions.assertEquals(0, Calculator.divideNumberByAnother(133, 0));
+    public void shouldReturnZeroWhenDividingByZero() {
+        Assertions.assertEquals(0, Calculator.divide(133, 0));
     }
 }
