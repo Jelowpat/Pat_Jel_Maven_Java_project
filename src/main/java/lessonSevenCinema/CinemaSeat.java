@@ -1,28 +1,34 @@
 package lessonSevenCinema;
 
+import java.util.Objects;
+
 public class CinemaSeat {
 
-    private final int number;
+    private final int NUMBER;
 
-    private final int row;
+    private final int ROW;
 
-    private boolean isAvailable = true;
+    private String status = "free";
 
     public CinemaSeat(int number, int row){
-        this.number = number;
-        this.row = row;
+        this.NUMBER = number;
+        this.ROW = row;
     }
 
     public int getRow() {
-        return row;
+        return ROW;
     }
-
     public int getNumber() {
-        return number;
+        return NUMBER;
+    }
+    public String getStatus() {
+        return status;
     }
 
     public void changeStatus(){
-        this.isAvailable = !this.isAvailable;
+        if (Objects.equals(this.status, "free")){
+            this.status = "occupied";
+        }
+        else this.status = "occupied";
     }
-
 }
