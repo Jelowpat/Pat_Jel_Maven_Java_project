@@ -5,13 +5,12 @@ import org.junit.jupiter.api.Test;
 
 
 class OddOrEvenTest {
-
     @Test
-    public void isEven() {
-        Assertions.assertEquals("even", OddOrEven.CheckIfEvenOrOdd(2));
+    public void shouldBeEven() {
+        Assertions.assertTrue(OddOrEven.checkIfEven(2));
     }
     @Test
-    public void isOdd() {
-        Assertions.assertEquals("odd", OddOrEven.CheckIfEvenOrOdd(1111));
+    public void shouldBeOdd() {
+        Assertions.assertTrue(OddOrEven.checkIfOdd(111));
     }
 }

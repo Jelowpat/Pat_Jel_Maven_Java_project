@@ -1,8 +1,10 @@
 package lessonSixOddOrEven;
 
 public class OddOrEven {
-    public static String CheckIfEvenOrOdd (int a){
-        if (a % 2 == 0) {return "even";}
-        else {return "odd";}
+    public static boolean checkIfEven(int number){
+        return number % 2 == 0;
+    }
+    public static boolean checkIfOdd(int number){
+        return number % 2 == 1;
     }
 }
