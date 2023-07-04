@@ -1,8 +1,8 @@
 package lessonSixDaysOfWeek;
 
 public class DaysOfWeek {
-    public static String getInfoAboutTheDay(int a){
-        return switch (a) {
+    public static String getInfoAboutTheDay(int dayNumber){
+        return switch (dayNumber) {
             case 1 -> "Monday";
             case 2 -> "Tuesday";
             case 3 -> "Wednesday";
