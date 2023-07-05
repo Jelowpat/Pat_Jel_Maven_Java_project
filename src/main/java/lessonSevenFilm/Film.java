@@ -2,10 +2,10 @@ package lessonSevenFilm;
 
 public class Film {
 
-    private  String title;
-    private  String director;
-    private  int lengthInMinutes;
-    private  int yearOfProduction;
+    private final String title;
+    private final String director;
+    private final int lengthInMinutes;
+    private final int yearOfProduction;
 
     public Film(String title, String director, int lengthInMinutes, int yearOfProduction) {
         this.title = title;
@@ -13,4 +13,5 @@ public class Film {
         this.lengthInMinutes = lengthInMinutes;
         this.yearOfProduction = yearOfProduction;
     }
+
 }
