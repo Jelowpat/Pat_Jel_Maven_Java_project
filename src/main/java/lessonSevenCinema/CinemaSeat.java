@@ -4,31 +4,31 @@ import java.util.Objects;
 
 public class CinemaSeat {
 
-    private final int NUMBER;
+    private final int number;
 
-    private final int ROW;
+    private final int row;
 
-    private String status = "free";
+    private Status status = Status.Free;
 
     public CinemaSeat(int number, int row){
-        this.NUMBER = number;
-        this.ROW = row;
+        this.number = number;
+        this.row = row;
     }
 
     public int getRow() {
-        return ROW;
+        return row;
     }
     public int getNumber() {
-        return NUMBER;
+        return number;
     }
-    public String getStatus() {
+    public Status getStatus() {
         return status;
     }
 
     public void changeStatus(){
-        if (Objects.equals(this.status, "free")){
-            this.status = "occupied";
+        if (Objects.equals(this.status, Status.Occupied)){
+            this.status = Status.Free;
         }
-        else this.status = "occupied";
+        else this.status = Status.Occupied;
     }
 }
