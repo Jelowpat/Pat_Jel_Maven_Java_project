@@ -1,0 +1,10 @@
+package lesson8Animal;
+
+public class Animal {
+
+    String name;
+
+    public Animal(String name) {
+        this.name = name;
+    }
+}
