@@ -1,5 +1,4 @@
 package lessonEightAreaAndPerimeter;
-import java.lang.Math.*;
 
 public class Square implements AreaAndPerimeter{
 
