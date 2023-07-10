@@ -59,7 +59,13 @@ public class Person {
 
     @Override
     public String toString(){
-        return "Name: " + name + "\nSurname: " + surname + "\nAge: " + this.getAge() + "\nHeight: " +
-                height + "\nWeight: " + weight + "\nDate of birth: " + birthDate;
+        return "Person{" +
+                "name=" + name +
+                ", surname=" + surname +
+                ", age=" + this.getAge() +
+                ", height=" + height +
+                ", weight=" + weight +
+                ", dateOfBirth=" + birthDate +
+                "}";
     }
 }

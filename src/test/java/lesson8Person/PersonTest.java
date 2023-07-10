@@ -37,8 +37,7 @@ class PersonTest {
 
     @Test
     void shouldDisplayCorrectStringPattern() {
-        Assertions.assertEquals("Name: Patryk\nSurname: Jelowicki\nAge: 28\n" +
-                "Height: 180.0\nWeight: 74.0\nDate of birth: 1994-12-05", person1.toString());
-        System.out.println(person1);
+        Assertions.assertEquals("Person{name=Patryk, surname=Jelowicki, age=28" +
+                ", height=180.0, weight=74.0, dateOfBirth=1994-12-05}", person1.toString());
     }
 }
