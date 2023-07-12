@@ -9,13 +9,13 @@ public enum WeekDay {
     Saturday(6),
     Sunday(7);
 
-    private final int DayString;
+    private final int DayNumber;
 
-    WeekDay(int DayString) {
-        this.DayString = DayString;
+    WeekDay(int DayNumber) {
+        this.DayNumber = DayNumber;
     }
 
     public int getDayNumber(){
-        return DayString;
+        return DayNumber;
     }
 }
