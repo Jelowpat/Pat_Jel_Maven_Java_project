@@ -5,38 +5,38 @@ import org.junit.jupiter.api.Test;
 
 class PersonTest {
 
-    Person person1 = new Person("Patryk", "Jelowicki", 1994, Month.December, 5,
+    private Person person1 = new Person("Patryk", "Jelowicki", 1994, Month.December, 5,
             180, 74);
-    Person person2 = new Person("Patryk", "Jelowicki", 1994, Month.December, 5,
+    private Person person2 = new Person("Patryk", "Jelowicki", 1994, Month.December, 5,
             180, 74);
-    Person person3 = new Person("Jacek", "Nowak", 1994, Month.December, 5,
+    private Person person3 = new Person("Jacek", "Nowak", 1994, Month.December, 5,
             180, 74);
 
     @Test
-    void shouldBeTheSameHashCode() {
+    public void shouldBeTheSameHashCode() {
         Assertions.assertEquals(person1.hashCode(), person2.hashCode());
     }
     @Test
-    void shouldBeDifferentHashCode() {
+    public void shouldBeDifferentHashCode() {
         Assertions.assertNotEquals(person1.hashCode(), person3.hashCode());
     }
 
     @Test
-    void shouldEqual() {
+    public void shouldEqual() {
         Assertions.assertEquals(person1, person2);
     }
     @Test
-    void shouldNotEqual(){
+    public void shouldNotEqual(){
         Assertions.assertNotEquals(person1, person3);
     }
 
     @Test
-    void shouldGetAge() {
+    public void shouldGetAge() {
         Assertions.assertEquals( 28, person1.getAge());
     }
 
     @Test
-    void shouldDisplayCorrectStringPattern() {
+    public void shouldDisplayCorrectStringPattern() {
         Assertions.assertEquals("Person{name=Patryk, surname=Jelowicki, age=28" +
                 ", height=180.0, weight=74.0, dateOfBirth=1994-12-05}", person1.toString());
     }
