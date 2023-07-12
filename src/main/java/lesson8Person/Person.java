@@ -53,7 +53,7 @@ public class Person {
     }
 
     public int getAge(){
-        this.age = Period.between(birthDate,LocalDate.now());
+        calculateAge();
         return age.getYears();
     }
 
