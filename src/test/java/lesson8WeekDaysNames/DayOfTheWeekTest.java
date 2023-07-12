@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 class DayOfTheWeekTest {
 
     @Test
-    void shouldReturnNameOfTheDay() {
+    public void shouldReturnNameOfTheDay() {
         Assertions.assertEquals("Monday", DayOfTheWeek.whatDayIsIt(WeekDay.Monday));
     }
 }

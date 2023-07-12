@@ -1,21 +1,21 @@
 package lesson8WeekDaysNames;
 
 public enum WeekDay {
-    Monday("Monday"),
-    Tuesday("Tuesday"),
-    Wednesday("Wednesday"),
-    Thursday("Thursday"),
-    Friday("Friday"),
-    Saturday("Saturday"),
-    Sunday("Sunday");
+    Monday(1),
+    Tuesday(2),
+    Wednesday(3),
+    Thursday(4),
+    Friday(5),
+    Saturday(6),
+    Sunday(7);
 
-    private final String DayString;
+    private final int DayString;
 
-    WeekDay(String DayString) {
+    WeekDay(int DayString) {
         this.DayString = DayString;
     }
 
-    public String getDayString(){
+    public int getDayNumber(){
         return DayString;
     }
 }
