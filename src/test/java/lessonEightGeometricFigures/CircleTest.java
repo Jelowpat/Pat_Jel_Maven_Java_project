@@ -6,15 +6,15 @@ import org.junit.jupiter.api.Test;
 
 class CircleTest {
 
-    Circle circle = new Circle(4);
+    private Circle circle = new Circle(4);
 
     @Test
-    void shouldCalculateArea() {
+    public void shouldCalculateArea() {
         Assertions.assertEquals(39.47841760435743, circle.getArea());
     }
 
     @Test
-    void shouldCalculatePerimeter() {
+    public void shouldCalculatePerimeter() {
         Assertions.assertEquals(25.132741228718345, circle.getPerimeter());
     }
 }

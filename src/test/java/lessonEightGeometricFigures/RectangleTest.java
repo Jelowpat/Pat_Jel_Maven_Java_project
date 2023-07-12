@@ -6,15 +6,15 @@ import org.junit.jupiter.api.Test;
 
 class RectangleTest {
 
-    Rectangle rectangle = new Rectangle(8, 12);
+    private Rectangle rectangle = new Rectangle(8, 12);
 
     @Test
-    void shouldCalculateArea() {
+    public void shouldCalculateArea() {
         Assertions.assertEquals(96, rectangle.getArea());
     }
 
     @Test
-    void shouldCalculatePerimeter() {
+    public void shouldCalculatePerimeter() {
         Assertions.assertEquals(40, rectangle.getPerimeter());
     }
 }

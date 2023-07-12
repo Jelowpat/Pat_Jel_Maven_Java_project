@@ -5,15 +5,15 @@ import org.junit.jupiter.api.Test;
 
 class SquareTest {
 
-    Square square = new Square(5);
+    private Square square = new Square(5);
 
     @Test
-    void shouldCalculateArea() {
+    public void shouldCalculateArea() {
         Assertions.assertEquals(25, square.getArea());
     }
 
     @Test
-    void shouldCalculatePerimeter() {
+    public void shouldCalculatePerimeter() {
         Assertions.assertEquals(20, square.getPerimeter());
     }
 

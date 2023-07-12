@@ -2,9 +2,9 @@ package lessonEightGeometricFigures;
 
 public class Circle extends Shape{
 
-    double radius;
-
     private static final double PI = Math.PI;
+    private final double radius;
+
     public Circle(double radius){
         this.radius = radius;
     }

@@ -4,9 +4,10 @@ import java.lang.Math;
 
 public class Triangle extends Shape{
 
-    double sideA;
-    double sideB;
-    double sideC;
+    private final double sideA;
+    private final double sideB;
+    private final double sideC;
+
     public Triangle(double sideA, double sideB, double sideC) {
         this.sideA = sideA;
         this.sideB = sideB;

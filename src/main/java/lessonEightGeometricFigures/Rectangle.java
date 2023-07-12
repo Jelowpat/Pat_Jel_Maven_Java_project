@@ -1,8 +1,8 @@
 package lessonEightGeometricFigures;
 
 public class Rectangle extends Shape{
-    double sideA;
-    double sideB;
+    private final double sideA;
+    private final double sideB;
 
     public Rectangle(double sideA, double sideB) {
         this.sideA = sideA;
