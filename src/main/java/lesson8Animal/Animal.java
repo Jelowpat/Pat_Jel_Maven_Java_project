@@ -2,7 +2,7 @@ package lesson8Animal;
 
 public class Animal {
 
-    String name;
+    private final String name;
 
     public Animal(String name) {
         this.name = name;
