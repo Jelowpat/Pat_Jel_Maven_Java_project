@@ -6,33 +6,21 @@ import java.util.Objects;
 public class Person {
     private final String name;
     private final String surname;
-
-    // if I don't initialize these, I can't use the 'LocalDate.of' method, any solutions to that?
-    private int yearOfBirth = 0;
-    private Month monthOfBirth = Month.January;
-    private int dayOfBirth = 0;
-
     private final LocalDate birthDate;
     private double height;
     private double weight;
-    private Period age;
-
     public Person(String name, String surname, int yearOfBirth, Month monthOfBirth, int dayOfBirth,
                   double height, double weight) {
         this.name = name;
         this.surname = surname;
-        this.yearOfBirth = yearOfBirth;
-        this.monthOfBirth = monthOfBirth;
-        this.dayOfBirth = dayOfBirth;
         this.height = height;
         this.weight = weight;
         this.birthDate = LocalDate.of(yearOfBirth, monthOfBirth.getMonthNumber(), dayOfBirth);
-        calculateAge();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, yearOfBirth, monthOfBirth, dayOfBirth, height, weight);
+        return Objects.hash(name, surname, birthDate, height, weight);
     }
 
     @Override
@@ -42,19 +30,13 @@ public class Person {
         Person person = (Person) o;
         return Objects.equals(name, person.name) &&
                         Objects.equals(surname, person.surname) &&
+                        Objects.equals(birthDate, person.birthDate) &&
                         Double.compare(weight, person.weight) == 0 &&
-                        height == person.height &&
-                        yearOfBirth == person.yearOfBirth &&
-                        monthOfBirth == person.monthOfBirth &&
-                        dayOfBirth == person.dayOfBirth;
-    }
-    public void calculateAge(){
-         this.age = Period.between(LocalDate.now(), birthDate);
+                        height == person.height;
     }
 
     public int getAge(){
-        calculateAge();
-        return age.getYears();
+        return Period.between(birthDate, LocalDate.now()).getYears();
     }
 
     @Override
