@@ -4,8 +4,8 @@ public class Bicycle extends Vehicle {
 
     @Override
     public void drive() {
-        if (!super.isMoving) {
-            super.isMoving = true;
+        if (!super.moving) {
+            super.moving = true;
             System.out.println("The bicycle is driving");
         }
         else {
@@ -14,8 +14,8 @@ public class Bicycle extends Vehicle {
     }
     @Override
     public void stop() {
-        if (super.isMoving) {
-            super.isMoving = false;
+        if (super.moving) {
+            super.moving = false;
             System.out.println("The bicycle stopped");
         }
         else {

@@ -10,9 +10,9 @@ public class Car extends Vehicle {
 
     @Override
     public void drive() {
-        if (!super.isMoving) {
+        if (!super.moving) {
             engine.startEngine();
-            super.isMoving = true;
+            super.moving = true;
             System.out.println("The car is driving");
         }
         else {
@@ -22,8 +22,8 @@ public class Car extends Vehicle {
 
     @Override
     public void stop() {
-        if (super.isMoving) {
-            super.isMoving = false;
+        if (super.moving) {
+            super.moving = false;
             engine.stopEngine();
             System.out.println("The car stopped");
         }
