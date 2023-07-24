@@ -2,22 +2,25 @@ package lesson9Text;
 
 public class TextAnalyzer {
 
-    public static String analyzeText(String text){
-        if (text.equals("")){
-            return "this is an empty string";
+    public static void analyzeText(String text) {
+        try {
+            if (!text.equals("")) {
+                System.out.printf("length: %s\n", text.length());
+                System.out.printf("is palindrome: %b", isPalindrome(text));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        return String.format("length: %s\nis palindrome: %b", getTextLength(text), isPalindrome(text));
     }
 
     public static boolean isPalindrome(String text) {
         text = text.replaceAll("[^a-zA-Z0-9]","").toLowerCase();
-        StringBuilder stringBuilder = new StringBuilder(text);
-        String reversedText = stringBuilder.reverse().toString();
-        return text.equals(reversedText);
+        return text.equals(reverseText(text));
     }
 
-    public static int getTextLength(String text) {
-        return text.length();
+    public static String reverseText(String text) {
+        StringBuilder stringBuilder = new StringBuilder(text);
+        return stringBuilder.reverse().toString();
     }
 
 }

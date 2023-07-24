@@ -7,14 +7,14 @@ class TextAnalyzerTest {
 
     @Test
     public void shouldBePalindrome() {
-        Assertions.assertEquals("length: 22\nis palindrome: true", TextAnalyzer.analyzeText("Niagara. O roar again!"));
+        Assertions.assertTrue(TextAnalyzer.isPalindrome("Niagara. O roar again!"));
     }
     @Test
     public void shouldNotBePalindrome() {
-        Assertions.assertEquals("length: 16\nis palindrome: false", TextAnalyzer.analyzeText("not a palindrome"));
+        Assertions.assertFalse(TextAnalyzer.isPalindrome("not a palindrome"));
     }
     @Test
-    public void shouldNotAnalyze() {
-        Assertions.assertEquals("this is an empty string", TextAnalyzer.analyzeText(""));
+    public void shouldReverseText() {
+        Assertions.assertEquals("emordnilap", TextAnalyzer.reverseText("palindrome"));
     }
 }
