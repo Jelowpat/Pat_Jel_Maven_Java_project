@@ -7,7 +7,7 @@ import java.nio.file.Path;
 
 public class EverySecondLinePrinter {
 
-    public void readText() throws IOException {
+    public void printEverySecondLine() throws IOException {
 
         BufferedReader stream = Files.newBufferedReader(Path.of
                 ("C:/Users/Kolorek/IdeaProjects/Pat_Jel_Maven_Java_project/src/main/java/lesson10Data/data.txt"));
