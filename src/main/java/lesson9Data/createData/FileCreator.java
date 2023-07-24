@@ -1,4 +1,4 @@
-package lesson9Data;
+package lesson9Data.createData;
 
 import java.io.BufferedWriter;
 import java.io.File;
