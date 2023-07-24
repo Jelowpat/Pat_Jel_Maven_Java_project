@@ -7,11 +7,10 @@ import java.nio.file.Path;
 
 public class TextPrinter {
 
-    private static final String PATH = "C:/Users/Kolorek/IdeaProjects/Pat_Jel_Maven_Java_project/src/main/java/lesson10Data/data.txt";
-
     public void readText() throws IOException {
 
-        BufferedReader stream = Files.newBufferedReader(Path.of(PATH));
+        BufferedReader stream = Files.newBufferedReader(Path.of
+                ("C:/Users/Kolorek/IdeaProjects/Pat_Jel_Maven_Java_project/src/main/java/lesson10Data/data.txt"));
 
         String line = stream.readLine();
 
