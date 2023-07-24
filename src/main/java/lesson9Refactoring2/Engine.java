@@ -2,37 +2,22 @@ package lesson9Refactoring2;
 
 public class Engine {
 
-    private boolean engineStarted = false;
-    private final double size;
-    private final EngineType type;
-
-    public Engine(double size, EngineType type){
-        this.size = size;
-        this.type = type;
-    }
+    private boolean isStarted = false;
 
     public void startEngine() {
-        if (!engineStarted) {
-            engineStarted = true;
+        if (!isStarted) {
+            isStarted = true;
         }
     }
 
     public void stopEngine() {
-        if (engineStarted) {
-            engineStarted = false;
+        if (isStarted) {
+            isStarted = false;
         }
     }
 
-    public boolean isEngineStarted() {
-        return engineStarted;
-    }
-
-    public double getSize() {
-        return size;
-    }
-
-    public EngineType getType() {
-        return type;
+    public boolean isStarted() {
+        return isStarted;
     }
 
 }
