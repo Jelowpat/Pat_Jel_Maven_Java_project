@@ -47,7 +47,7 @@ class EmployeeTest {
         //given
         BigDecimal baseSalary = new BigDecimal("3000");
         BigDecimal bonus = new BigDecimal("500");
-        Employee employee = new Employee("John", 45, baseSalary, bonus, "Smith");
+        Employee employee = new Employee("John", "Smith", 45, baseSalary, bonus);
         //when
         BigDecimal actualTotalSalary = employee.getTotalSalary();
         //then
@@ -60,7 +60,7 @@ class EmployeeTest {
         //given
         BigDecimal baseSalary = new BigDecimal("3000");
         BigDecimal bonus = new BigDecimal("500");
-        Employee employee = new Employee("John", 45, baseSalary, bonus, "Smith");
+        Employee employee = new Employee("John", "Smith", 45, baseSalary, bonus);
         //when
         BigDecimal actualBonus = employee.getBonus();
         //then
