@@ -3,10 +3,10 @@ package lessonSevenPythagoreanTriangle;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class PythagoreanTripleTest {
+class PythagoreanTriangleTest {
 
     @Test
-    void shouldBePythagorean1() {
+    void shouldBePythagorean() {
         Assertions.assertTrue(PythagoreanTriangle.isPythagorean(3,4,5));
     }
 
