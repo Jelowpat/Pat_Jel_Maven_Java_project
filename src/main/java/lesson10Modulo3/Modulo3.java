@@ -10,7 +10,7 @@ public class Modulo3 {
                 }
                 System.out.println(element + " is divisible by 3");
             } catch (IllegalArgumentException exception){
-                System.out.println(exception);
+                System.out.println(exception.getMessage());
             }
         }
     }
