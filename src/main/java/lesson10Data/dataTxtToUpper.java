@@ -21,7 +21,7 @@ public class dataTxtToUpper {
         }
     }
 
-    public String changeText() throws IOException {
+    private String changeText() throws IOException {
         return Files.readString(INPUT_PATH).toUpperCase();
     }
 
