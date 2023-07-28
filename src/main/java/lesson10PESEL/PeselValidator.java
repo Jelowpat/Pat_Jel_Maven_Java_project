@@ -14,8 +14,3 @@ public class PeselValidator {
     }
 
 }
-//Zaimplementuj klasę, której zadaniem będzie walidacja numeru PESEL pod kątem:
-//●      typu danych (załóż, że argument jest typu String)
-//●      długości
-//Jeżeli typ danych będzie niezgodny powinien zostać rzucony wyjątek WrongTypeOfDataException, jeżeli długość jest
-// niewłaściwa wówczas rzucany jest wyjątek IllegalLengthException. Każdy wyjątek powinien zwracać odpowiedni message.
