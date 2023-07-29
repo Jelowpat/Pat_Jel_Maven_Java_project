@@ -8,9 +8,9 @@ import java.nio.file.Path;
 public class dataTxtToUpper {
 
     private static final Path INPUT_PATH = Path.of
-            ("C:/Users/Kolorek/IdeaProjects/Pat_Jel_Maven_Java_project/src/main/java/lesson10Data/data.txt");
+            ("src/main/java/lesson10Data/data.txt");
     private static final Path OUTPUT_PATH = Path.of
-            ("C:/Users/Kolorek/IdeaProjects/Pat_Jel_Maven_Java_project/src/main/java/lesson10Data/output.txt");
+            ("src/main/java/lesson10Data/output.txt");
 
     public void generateOutput() {
 
