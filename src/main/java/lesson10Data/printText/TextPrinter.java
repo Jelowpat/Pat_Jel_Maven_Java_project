@@ -10,7 +10,7 @@ public class TextPrinter {
     public void readText() throws IOException {
 
         BufferedReader stream = Files.newBufferedReader(Path.of
-                ("C:/Users/Kolorek/IdeaProjects/Pat_Jel_Maven_Java_project/src/main/java/lesson10Data/data.txt"));
+                ("src/main/java/lesson10Data/data.txt"));
 
         String line = stream.readLine();
 
