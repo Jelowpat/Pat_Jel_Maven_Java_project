@@ -1,8 +1,8 @@
 package lesson9EnhancedCalculator;
 
-public class Add implements Operation{
+public class Substraction implements Operation{
     @Override
     public double calculate(double a, double b) {
-        return a + b;
+        return a - b;
     }
 }
