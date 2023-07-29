@@ -7,7 +7,7 @@ import java.util.Collections;
 
 public class ReverseReader {
     private static final Path filePath = Path.of
-            ("C:/Users/Kolorek/IdeaProjects/Pat_Jel_Maven_Java_project/src/main/java/lesson10Data/data.txt");
+            ("src/main/java/lesson10Data/data.txt");
 
     public void readReversed() throws IOException {
 
