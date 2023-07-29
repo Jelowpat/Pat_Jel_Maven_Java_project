@@ -3,14 +3,18 @@ package lesson10Data;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class EverySecondLinePrinter {
 
+    public static void main(String[] args) throws IOException {
+        new EverySecondLinePrinter().printEverySecondLine();
+    }
+
     public void printEverySecondLine() throws IOException {
 
-        BufferedReader stream = Files.newBufferedReader(Path.of
-                ("C:/Users/Kolorek/IdeaProjects/Pat_Jel_Maven_Java_project/src/main/java/lesson10Data/data.txt"));
+        BufferedReader stream = Files.newBufferedReader(Paths.get
+                ("src/main/java/lesson10Data/data.txt"));
 
         String line = stream.readLine();
 
