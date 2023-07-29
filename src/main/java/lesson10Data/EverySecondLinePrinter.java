@@ -7,10 +7,6 @@ import java.nio.file.Paths;
 
 public class EverySecondLinePrinter {
 
-    public static void main(String[] args) throws IOException {
-        new EverySecondLinePrinter().printEverySecondLine();
-    }
-
     public void printEverySecondLine() throws IOException {
 
         BufferedReader stream = Files.newBufferedReader(Paths.get
