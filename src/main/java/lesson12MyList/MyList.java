@@ -62,13 +62,13 @@ public class MyList implements OwnList {
 
     @Override
     public String toString() {
-        StringBuilder print = new StringBuilder("{");
-        if (size == 0){ return super.toString();}
+        StringBuilder print = new StringBuilder("[");
+        if (size == 0){ return "[]";}
+
         for (int i = 0; i < size - 1; i++){
             print.append(content[i]).append(", ");
         }
-        print.append(content[size - 1]).append("}");
-        return print.toString();
+        return print.append(content[size - 1]).append("]").toString();
     }
 
     private void rangeCheckForAdd(int index) {
