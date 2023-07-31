@@ -16,11 +16,11 @@ public class Employee {
     }
 
     public Employee(String name, String surname, int age) {
-        this(name, surname, age, BigDecimal.valueOf(0));
+        this(name, surname, age, BigDecimal.ZERO);
     }
 
     public Employee(String name, String surname, int age, BigDecimal baseSalary) {
-        this(name, surname, age, baseSalary, BigDecimal.valueOf(0));
+        this(name, surname, age, baseSalary, BigDecimal.ZERO);
     }
 
     public Employee(String name, String surname, int age, BigDecimal baseSalary, BigDecimal bonus) {
