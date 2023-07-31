@@ -27,7 +27,7 @@ public class MyList implements OwnList {
     public void add(Integer element){
         content = Arrays.copyOf(content, size + 1);
         content[size] = element;
-        this.size += 1;
+        size += 1;
     }
 
     @Override
