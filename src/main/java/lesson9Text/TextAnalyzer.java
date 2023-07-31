@@ -3,13 +3,9 @@ package lesson9Text;
 public class TextAnalyzer {
 
     public static void analyzeText(String text) {
-        try {
-            if (!text.equals("")) {
-                System.out.printf("length: %s\n", text.length());
-                System.out.printf("is palindrome: %b", isPalindrome(text));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
+        if (!text.equals("") && text != null) {
+            System.out.printf("length: %s\n", text.length());
+            System.out.printf("is palindrome: %b", isPalindrome(text));
         }
     }
 
