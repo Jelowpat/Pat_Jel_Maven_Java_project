@@ -3,7 +3,7 @@ package lesson9Text;
 public class TextAnalyzer {
 
     public static void analyzeText(String text) {
-        if (!text.equals("") && text != null) {
+        if (text != null && !text.equals("")) {
             System.out.printf("length: %s\n", text.length());
             System.out.printf("is palindrome: %b", isPalindrome(text));
         }
