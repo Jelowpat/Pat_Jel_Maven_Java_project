@@ -2,9 +2,10 @@ package lesson11Training;
 
 public class TrainingAnalyzer {
 
-    private static final int DURATION_SCORE_WEIGHT = 1;
-    private static final int CALORIES_BURNT_SCORE_WEIGHT = 2;
-    private static final int AVERAGE_BPM_SCORE_WEIGHT = 3;
+    private static final double DURATION_SCORE_WEIGHT = 1;
+    private static final double CALORIES_BURNT_SCORE_WEIGHT = 2;
+    private static final double AVERAGE_BPM_SCORE_WEIGHT = 3;
+    private static final double SUM_OF_WEIGHTED_SCORES = 6;
 
     private final Training training;
 
@@ -13,8 +14,8 @@ public class TrainingAnalyzer {
     }
 
     public double getWeightedAverageScore(){
-        return (double)(getDurationScore() * DURATION_SCORE_WEIGHT + getCaloriesBurntScore() * CALORIES_BURNT_SCORE_WEIGHT +
-                getAverageBpmScore() * AVERAGE_BPM_SCORE_WEIGHT) / 6;
+        return (getDurationScore() * DURATION_SCORE_WEIGHT + getCaloriesBurntScore() * CALORIES_BURNT_SCORE_WEIGHT +
+                getAverageBpmScore() * AVERAGE_BPM_SCORE_WEIGHT) / SUM_OF_WEIGHTED_SCORES;
     }
 
     private int getDurationScore(){
