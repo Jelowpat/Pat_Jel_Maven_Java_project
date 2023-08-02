@@ -13,7 +13,7 @@ class WordFinderTest {
         WordFinder wordFinder = new WordFinder();
 
         //when
-        boolean result = wordFinder.findWord("Pliki");
+        boolean result = wordFinder.containsWord("Pliki");
 
         //then
         Assertions.assertTrue(result);
@@ -24,7 +24,7 @@ class WordFinderTest {
         WordFinder wordFinder = new WordFinder();
 
         //when
-        boolean result = wordFinder.findWord("Pliczki");
+        boolean result = wordFinder.containsWord("Pliczki");
 
         //then
         Assertions.assertFalse(result);

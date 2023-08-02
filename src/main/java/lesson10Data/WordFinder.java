@@ -6,10 +6,9 @@ import java.nio.file.Path;
 
 public class WordFinder {
 
-    public boolean findWord (String word) throws IOException {
+    public boolean containsWord(String word) throws IOException {
 
-        Path filePath = Path.of
-                ("src/main/java/lesson10Data/data.txt");
+        Path filePath = Path.of("src/main/java/lesson10Data/data.txt");
 
         String text = Files.readString(filePath);
 
