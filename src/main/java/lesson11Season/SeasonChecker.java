@@ -2,14 +2,16 @@ package lesson11Season;
 
 import java.time.Month;
 
+import static lesson11Season.Season.*;
+
 public class SeasonChecker {
 
     public Season getSeason(Month month) {
         return switch (month) {
-            case JANUARY, FEBRUARY, MARCH -> Season.winter;
-            case APRIL, MAY, JUNE -> Season.spring;
-            case JULY, AUGUST, SEPTEMBER -> Season.summer;
-            case OCTOBER, NOVEMBER, DECEMBER -> Season.fall;
+            case JANUARY, FEBRUARY, MARCH -> WINTER;
+            case APRIL, MAY, JUNE -> SPRING;
+            case JULY, AUGUST, SEPTEMBER -> SUMMER;
+            case OCTOBER, NOVEMBER, DECEMBER -> FALL;
         };
     }
 }
