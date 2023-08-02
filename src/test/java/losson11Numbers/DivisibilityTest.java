@@ -8,7 +8,7 @@ class DivisibilityTest {
 
     @ParameterizedTest(name = "should verify if {0} is divisible by 2")
     @ValueSource(ints = {2,4,6,8,123132})
-    public void isDivisibleByTwo(int number) {
+    public void shouldBeDivisibleByTwo(int number) {
         //given
         Divisibility divisibility = new Divisibility();
 
@@ -21,7 +21,7 @@ class DivisibilityTest {
 
     @ParameterizedTest(name = "should verify if {0} is not divisible by 2")
     @ValueSource(ints = {3,5,9,5675757})
-    public void isNotDivisibleByTwo(int number) {
+    public void shouldNotBeDivisibleByTwo(int number) {
         //given
         Divisibility divisibility = new Divisibility();
 
