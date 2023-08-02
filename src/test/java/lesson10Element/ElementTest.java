@@ -20,14 +20,11 @@ class ElementTest {
     }
 
     @Test
-    void shouldNotCalculateElement() {
+    void shouldThrowIllegalArgumentExceptionWhenProvidedNegativeNumber() {
         //given
         Element element = new Element();
 
-        //when
-        double result = element.getElement(-4);
-
         //then
-        Assertions.assertEquals(NaN, result);
+        Assertions.assertThrows(IllegalArgumentException.class, () -> element.getElement(-4));
     }
 }

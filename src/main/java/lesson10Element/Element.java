@@ -4,8 +4,13 @@ import java.lang.Math;
 
 public class Element {
 
-    public double getElement(double number) throws IllegalArgumentException{
-        return Math.pow(number, 0.5);
+    public double getElement(double number){
+
+        if (number < 0) {
+            throw new IllegalArgumentException();
+        }
+
+        return Math.sqrt(number);
     }
 
 }
