@@ -31,8 +31,7 @@ public class Person implements Comparable<Person>{
 
     @Override
     public int compareTo(Person anotherPerson) {
-        int value2 = anotherPerson.getBirthYear();
-        return Integer.compare(value2, birthYear);
+        return Integer.compare(anotherPerson.getBirthYear(), birthYear);
     }
 
     @Override
