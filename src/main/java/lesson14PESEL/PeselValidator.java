@@ -7,7 +7,7 @@ public class PeselValidator {
 
 
     public boolean validate(String pesel){
-        Pattern pattern = Pattern.compile("\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d");
+        Pattern pattern = Pattern.compile("\\d{11}");
         Matcher matcher = pattern.matcher(pesel);
         return matcher.matches();
     }
