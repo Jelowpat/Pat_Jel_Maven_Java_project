@@ -9,7 +9,7 @@ class PeselValidatorTest {
 
     @ParameterizedTest
     @CsvSource(value = {"12345678901:true","1234567890111:false", "qwertyuiopa:false"}, delimiter = ':')
-    void ShouldValidate(String pesel, boolean expected) {
+    void shouldValidate(String pesel, boolean expected) {
         //given
         PeselValidator peselValidator = new PeselValidator();
 
@@ -22,7 +22,7 @@ class PeselValidatorTest {
 
     @ParameterizedTest
     @CsvSource(value = {"12345678901:true","1234567890111:false", "qwertyuiopa:false"}, delimiter = ':')
-    void ShouldValidateWithRange(String pesel, boolean expected) {
+    void shouldValidateWithRange(String pesel, boolean expected) {
         //given
         PeselValidator peselValidator = new PeselValidator();
 
