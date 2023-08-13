@@ -2,25 +2,25 @@ package lesson14PhoneBook;
 
 import java.util.Optional;
 
-public class PhoneBookPosition {
+public class Contact {
 
     private final String name;
     private final String surname;
     private String address;
-    private Optional phoneNumber;
+    private Optional<Integer> phoneNumber;
 
-    public PhoneBookPosition(String name, String surname, String address) {
-        this(name, surname, address,null);
-    }
-
-    public PhoneBookPosition(String name, String surname, String address, Integer phoneNumber) {
-        this.phoneNumber = Optional.ofNullable(phoneNumber);
+    public Contact(String name, String surname, String address) {
         this.name = name;
         this.surname = surname;
         this.address = address;
     }
 
-    public Optional getPhoneNumber() {
+    public Contact(String name, String surname, String address, Integer phoneNumber){
+        this(name, surname, address);
+        this.phoneNumber = Optional.of(phoneNumber);
+    }
+
+    public Optional<Integer> getPhoneNumber() {
             return phoneNumber;
     }
 
