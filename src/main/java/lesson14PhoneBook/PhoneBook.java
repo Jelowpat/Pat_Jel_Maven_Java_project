@@ -24,5 +24,13 @@ public class PhoneBook {
         return contacts;
     }
 
-
+    @Override
+    public String toString() {
+        StringBuilder stringBuilder = new StringBuilder("Contacts:\n");
+        for (Contact contact : contacts.values()) {
+            stringBuilder.append(contact);
+            stringBuilder.append("\n");
+        }
+        return stringBuilder.toString();
+    }
 }

@@ -26,4 +26,8 @@ public class Entry {
                 Objects.equals(surname, entry.surname);
     }
 
+    @Override
+    public String toString() {
+        return name + " " + surname;
+    }
 }

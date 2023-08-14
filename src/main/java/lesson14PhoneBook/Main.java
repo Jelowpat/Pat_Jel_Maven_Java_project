@@ -8,6 +8,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         PhoneBook phoneBook = new PhoneBook();
         phoneBook.addContactsFromFile(Paths.get("src/main/java/lesson14PhoneBook/addresses"));
-        System.out.println(phoneBook.getContacts());
+        System.out.println(phoneBook);
     }
 }
