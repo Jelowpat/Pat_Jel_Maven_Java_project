@@ -50,8 +50,8 @@ public class MyGenericList<E> implements OwnList<E>{
     }
 
     @Override
-    public Object get(int index) {
-        return content[index];
+    public E get(int index) {
+        return (E)content[index];
     }
 
     @Override

@@ -6,7 +6,7 @@ public interface OwnList<E> {
 
     boolean add(E e);
 
-    Object get(int index);
+    E get(int index);
 
     boolean remove(E o);
 
