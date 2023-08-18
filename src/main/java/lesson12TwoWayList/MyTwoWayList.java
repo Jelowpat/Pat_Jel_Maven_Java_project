@@ -1,7 +1,5 @@
 package lesson12TwoWayList;
 
-import java.util.NoSuchElementException;
-
 public class MyTwoWayList {
 
     private Node firstNode;
@@ -24,7 +22,7 @@ public class MyTwoWayList {
     public void add(Integer index, String value){
 
         if(index > size || index < 0){
-            throw new NoSuchElementException("index out of range");
+            throw new IndexOutOfBoundsException("index out of range");
         }
 
         Node temporaryNode = firstNode;
@@ -54,7 +52,7 @@ public class MyTwoWayList {
 
     public void remove(Integer index){
         if(index >= size || index < 0){
-            throw new NoSuchElementException("index out of range");
+            throw new IndexOutOfBoundsException("index out of range");
         }
 
         Node temporaryNode = firstNode;
@@ -93,6 +91,10 @@ public class MyTwoWayList {
             temporaryNode = temporaryNode.previous;
         }
         System.out.println(stringBuilder);
+    }
+
+    public int size(){
+        return size;
     }
 
 
