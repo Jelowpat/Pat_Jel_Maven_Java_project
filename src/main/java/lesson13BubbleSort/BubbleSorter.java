@@ -1,16 +1,7 @@
 package lesson13BubbleSort;
-import java.util.ArrayList;
 import java.util.List;
 
 public class BubbleSorter {
-
-    public static void main(String[] args) {
-        List<Integer> list = new ArrayList<>();
-        list.addAll(List.of(1,5345,1414,4342,141422,2211));
-        System.out.println(list);
-        sort(list);
-        System.out.println(list);
-    }
 
     public static <E extends Comparable<E>> void sort(List<E> list){
         int listLength = list.size();
