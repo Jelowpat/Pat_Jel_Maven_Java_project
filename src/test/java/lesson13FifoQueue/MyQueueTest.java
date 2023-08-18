@@ -27,7 +27,10 @@ class MyQueueTest {
         myQueue.offer(3);
         myQueue.offer(4);
         //then
-        Assertions.assertEquals(1, myQueue.poll());
+        Assertions.assertAll("should take first in, after that second in",
+                () -> Assertions.assertEquals(1, myQueue.poll()),
+                () -> Assertions.assertEquals(2, myQueue.poll())
+                );
     }
 
     @Test
