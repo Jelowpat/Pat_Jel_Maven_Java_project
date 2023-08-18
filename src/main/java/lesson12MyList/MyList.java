@@ -1,6 +1,7 @@
 package lesson12MyList;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -11,6 +12,11 @@ public class MyList implements OwnList {
 
     public MyList(){
         content = new Integer[]{};
+    }
+
+    public MyList(List<Integer> list){
+        this();
+        list.forEach(this::add);
     }
 
     @Override
@@ -40,7 +46,9 @@ public class MyList implements OwnList {
         rangeCheckForAdd(index);
         if (index == size){
             content = Arrays.copyOf(content, size + 1);
+
         }
+        content = Arrays.copyOf(content, size + 1);
         System.arraycopy(content, index,
                 content, index + 1,
                 size - index);
