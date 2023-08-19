@@ -9,7 +9,8 @@ public class DivisibleByThree {
     }
 
     private static void printDivisibleFromRange(int first, int last){
-        IntStream.range(first, last+1).filter(x -> x % 3 == 0)
+        IntStream.range(first, last+1)
+                .filter(x -> x % 3 == 0)
                 .forEach(System.out::println);
     }
 
