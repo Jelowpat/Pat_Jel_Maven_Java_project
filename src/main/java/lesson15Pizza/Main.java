@@ -26,18 +26,32 @@ public class Main {
         Menu menu = new Menu(pizzaList);
 
         System.out.println("Vegetarian:");
-        menu.getPositions().stream().filter(Pizza::isVegetarian).forEach(System.out::println);
+        menu.getPositions()
+                .stream()
+                .filter(Pizza::isVegetarian)
+                .forEach(System.out::println);
         System.out.println("Celery:");
-        menu.getPositions().stream().filter(x -> x.getIngredientsList().contains(celery)).forEach(System.out::println);
+        menu.getPositions()
+                .stream()
+                .filter(x -> x.getIngredientsList().contains(celery))
+                .forEach(System.out::println);
         System.out.println("Does any vegetarian pizza contain both Pepper and tomato:");
-        System.out.println(menu.getPositions().stream().filter(Pizza::isVegetarian)
+        System.out.println(menu.getPositions()
+                .stream()
+                .filter(Pizza::isVegetarian)
                 .anyMatch(x -> x.getIngredientsList().containsAll(List.of(tomato, pepper))));
         System.out.println("Do all pizzas contain mozarella:");
-        System.out.println(menu.getPositions().stream().allMatch(x -> x.getIngredientsList().contains(mozzarella)));
+        System.out.println(menu.getPositions()
+                .stream()
+                .allMatch(x -> x.getIngredientsList().contains(mozzarella)));
         System.out.println("The least caloric Pizza:");
-        System.out.println(menu.getPositions().stream().min(Comparator.comparingInt(Pizza::getCalories)));
+        System.out.println(menu.getPositions()
+                .stream()
+                .min(Comparator.comparingInt(Pizza::getCalories)));
         System.out.println("The most caloric Pizza:");
-        System.out.println(menu.getPositions().stream().max(Comparator.comparingInt(Pizza::getCalories)));
+        System.out.println(menu.getPositions()
+                .stream()
+                .max(Comparator.comparingInt(Pizza::getCalories)));
 
     }
 
