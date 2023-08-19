@@ -19,11 +19,17 @@ public class Main {
                 new CinemaRoom("j", fourDimensions)
         );
 
-        System.out.println("This Cinema has: "+cinema.stream().filter(x -> x.getType() == twoDimensions)
+        System.out.println("This Cinema has: "+cinema
+                .stream()
+                .filter(x -> x.getType() == twoDimensions)
                 .count()+" 2D rooms.");
-        System.out.println("This Cinema has :"+cinema.stream().filter(x -> x.getType() == threeDimensions)
+        System.out.println("This Cinema has :"+cinema
+                .stream()
+                .filter(x -> x.getType() == threeDimensions)
                 .count()+" 3D rooms.");
-        System.out.println("This Cinema has :"+cinema.stream().filter(x -> x.getType() == fourDimensions)
+        System.out.println("This Cinema has :"+cinema
+                .stream()
+                .filter(x -> x.getType() == fourDimensions)
                 .count()+" 4D rooms.");
 
     }
