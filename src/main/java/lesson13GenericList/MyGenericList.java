@@ -1,6 +1,5 @@
 package lesson13GenericList;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,7 +19,15 @@ public class MyGenericList<E> implements OwnList<E>{
     }
 
     public  MyGenericList(List<E> list){
-        content = new Object[Math.max(DEFAULT_CAPACITY,list.size())];
+        this(list.size());
+        this.size = list.size();
+        for (int i = 0; i < size; i++){
+            content[i] = list.get(i);
+        }
+    }
+
+    public MyGenericList(MyGenericList<E> list){
+        this(list.size());
         this.size = list.size();
         for (int i = 0; i < size; i++){
             content[i] = list.get(i);
@@ -37,8 +44,8 @@ public class MyGenericList<E> implements OwnList<E>{
 
     public boolean add(int index, E e) {
         Object[] oldValues = Arrays.copyOf(content, size);
-        content = Arrays.copyOf(content, size +1);
         size += 1;
+        content = Arrays.copyOf(content, size);
         for (int i = 0; i < size; i++){
             if (i == index){
                 content[i] = e;
@@ -56,15 +63,20 @@ public class MyGenericList<E> implements OwnList<E>{
 
     @Override
     public boolean remove(E o) {
-        int iterations = size;
         boolean removed = false;
-        for (int i = 0; i < iterations; i++)
+        int removedIndex;
+        for (int i = 0; i < size; i++){
             if (content[i].equals(o)){
-                content[i] = content[i+1];
+                removedIndex = i;
                 size -= 1;
+                for (int k = removedIndex; k < size; k++){
+                    content[k]= content[k+1];
+                }
                 removed = true;
+                content = Arrays.copyOf(content, size);
+                break;
+            }
         }
-        content = Arrays.copyOf(content, size);
         return removed;
     }
 
