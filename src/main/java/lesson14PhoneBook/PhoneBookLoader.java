@@ -7,9 +7,8 @@ import java.util.List;
 
 public class PhoneBookLoader {
 
-    public PhoneBook load(Path path) throws IOException {
+    public void load(PhoneBook phoneBook, Path path) throws IOException {
         List<String> contactList = Files.readAllLines(path);
-        PhoneBook phoneBook = new PhoneBook();
 
         contactList.stream().map((String contact) -> contact.split(","))
                 .map(List::of)
@@ -19,7 +18,6 @@ public class PhoneBookLoader {
                             contact.get(2),Integer.valueOf(contact.get(3)));
                     phoneBook.addContact(position);
         });
-        return phoneBook;
     }
 
 }

@@ -1,7 +1,5 @@
 package lesson14PhoneBook;
 
-import java.io.IOException;
-import java.nio.file.Path;
 import java.util.*;
 
 public class PhoneBook {
@@ -10,10 +8,6 @@ public class PhoneBook {
 
     public void addContact(Contact position){
         contacts.put(new Entry(position.getName(), position.getSurname()), position);
-    }
-
-    public void addContactsFromFile(Path path) throws IOException {
-        contacts.putAll(new PhoneBookLoader().load(path).getContacts());
     }
 
     public Contact getContactByEntry(Entry key){
