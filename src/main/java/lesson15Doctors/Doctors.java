@@ -10,7 +10,8 @@ public class Doctors {
                 "Szpital:Chirurg:Radiolog:Chirurg Szczękowy:Pediatra",
                 "Przychodnia:Pediatra",
                 "Przychodnia:Internista:Laryngolog:Pediatra");
-        doctorsList.stream()
+        doctorsList
+                .stream()
                 .flatMap(x-> Stream.of(x.split(":")))
                 .distinct()
                 .filter(x -> !x.equals("Przychodnia"))
