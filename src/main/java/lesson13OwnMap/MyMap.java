@@ -4,61 +4,89 @@ import java.util.*;
 
 public class MyMap implements OwnMap{
 
-    private final List<String> keys;
-    private final List<String> values;
+    private final List<Entry> entries;
 
     public MyMap() {
-        keys = new ArrayList<>();
-        values = new ArrayList<>();
+        entries = new ArrayList<>();
     }
 
     public MyMap(Map<String, String> map) {
-        values = new ArrayList<>(map.values());
-        keys = new ArrayList<>(map.keySet());
+        this();
+        map.forEach(this::put);
     }
 
     @Override
     public boolean put(String key, String value) {
-        if (keys.contains(key)){
-            values.set(keys.indexOf(key), value);
+        return putEntry(new Entry(key, value));
+    }
+
+    private boolean putEntry(Entry entry){
+        if (containsKey(entry.key)){
+            entries.stream()
+                    .filter(x -> x.key.equals(entry.key))
+                    .findFirst()
+                    .get()
+                    .value = entry.value;
+
             return false;
-        }else{
-            keys.add(key);
-            values.add(value);
+        }
+        else {
+            entries.add(entry);
             return true;
         }
     }
 
     @Override
     public boolean containsKey(String key) {
-        return keys.contains(key);
+        return entries.stream()
+                .anyMatch(x -> x.key.equals(key));
     }
 
     @Override
     public boolean containsValue(String value) {
-        return values.contains(value);
+        return entries.stream()
+                .anyMatch(x -> x.value.equals(value));
     }
 
     @Override
     public String remove(String key) {
-        if (!keys.contains(key)){
+        if (!containsKey(key)){
             throw new NoSuchElementException();
         }
-        String removedValue = values.remove(keys.indexOf(key));
-        keys.remove(key);
-        return removedValue;
+        Entry removedEntry = entries
+                .stream()
+                .filter(x -> x.key.equals(key))
+                .findFirst()
+                .get();
+        entries.remove(removedEntry);
+        return removedEntry.value;
     }
 
     @Override
     public String get(String key) {
-        if (!keys.contains(key)){
+        if (!containsKey(key)){
             throw new NoSuchElementException();
         }
-        return values.get(keys.indexOf(key));
+        return entries.stream()
+                .filter(x -> x.key.equals(key))
+                .findFirst()
+                .get()
+                .value;
     }
 
     public int size(){
-        return keys.size();
+        return entries.size();
     }
 
+
+    private static class Entry{
+        private final String key;
+        private String value;
+
+        public Entry(String key,String value) {
+            this.key = key;
+            this.value = value;
+        }
+
+    }
 }
