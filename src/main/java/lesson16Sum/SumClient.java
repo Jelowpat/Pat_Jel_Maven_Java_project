@@ -3,22 +3,22 @@ package lesson16Sum;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.ServerSocket;
 import java.net.Socket;
 
-public class SumServer {
+public class SumClient {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        ServerSocket serverSocket = new ServerSocket(1337);
-        Socket socket = serverSocket.accept();
+        Socket socket = new Socket("localhost", 1337);
 
         ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
 
-        Integer sum = (Integer) inputStream.readObject() + (Integer) inputStream.readObject();
+        Integer a = 1;
+        Integer b = 11;
 
-        outputStream.writeObject(sum);
+        outputStream.writeObject(a);
+        outputStream.writeObject(b);
+        System.out.println(inputStream.readObject());
     }
-
 
 }
