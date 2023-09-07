@@ -3,22 +3,20 @@ package lesson16Echo;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.net.ServerSocket;
 import java.net.Socket;
 
-public class EchoServer {
+public class EchoClient {
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        ServerSocket serverSocket = new ServerSocket(1999);
-        Socket socket = serverSocket.accept();
+        Socket socket = new Socket("localhost", 1999);
 
         ObjectOutputStream outputStream = new ObjectOutputStream(socket.getOutputStream());
         ObjectInputStream inputStream = new ObjectInputStream(socket.getInputStream());
 
-        String message = (String) inputStream.readObject();
-        outputStream.writeObject(message.toUpperCase());
+        String text = "kurs programowania";
+        outputStream.writeObject(text);
+        System.out.println(inputStream.readObject());
 
     }
-
 
 }
